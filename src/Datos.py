@@ -1,9 +1,27 @@
 def agregar_tarea(lista_tareas):
+    """
+    Agrega una nueva tarea a la lista de tareas.
+
+    Args:
+        lista_tareas (list): Lista de tareas (diccionarios).
+
+    Returns:
+        None
+    """
     tarea = input("Ingresa la nueva tarea: ")
     lista_tareas.append({"tarea": tarea, "completada": False})
     print(f"Tarea '{tarea}' agregada.")
 
 def marcar_completada(lista_tareas):
+    """
+    Marca una tarea como completada.
+
+    Args:
+        lista_tareas (list): Lista de tareas (diccionarios).
+
+    Returns:
+        None
+    """
     tarea = input("Ingresa la tarea completada: ")
     for t in lista_tareas:
         if t["tarea"] == tarea:
@@ -13,6 +31,15 @@ def marcar_completada(lista_tareas):
     print(f"Tarea '{tarea}' no encontrada en la lista.")
 
 def mostrar_pendientes(lista_tareas):
+    """
+    Muestra las tareas pendientes.
+
+    Args:
+        lista_tareas (list): Lista de tareas (diccionarios).
+
+    Returns:
+        None
+    """
     print("\nTareas pendientes:")
     for t in lista_tareas:
         if not t["completada"]:
@@ -40,13 +67,6 @@ def main():
             break
         else:
             print("Opción no válida. Inténtalo de nuevo.")
-
-if __name__ == "__main__":
-    main()
-
-def main():
-    #Tu código va aquí. Mantén la indentación
-    pass # borra esta línei
 
 if __name__ == "__main__":
     main()
